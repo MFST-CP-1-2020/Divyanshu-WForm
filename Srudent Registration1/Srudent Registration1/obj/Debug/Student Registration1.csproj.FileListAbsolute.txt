@@ -1,0 +1,9 @@
+D:\Projects\WFormCP\Srudent Registration1\Srudent Registration1\bin\Debug\Srudent Registration1.exe.config
+D:\Projects\WFormCP\Srudent Registration1\Srudent Registration1\bin\Debug\Srudent Registration1.exe
+D:\Projects\WFormCP\Srudent Registration1\Srudent Registration1\bin\Debug\Srudent Registration1.pdb
+D:\Projects\WFormCP\Srudent Registration1\Srudent Registration1\obj\Debug\Srudent_Registration1.Form1.resources
+D:\Projects\WFormCP\Srudent Registration1\Srudent Registration1\obj\Debug\Srudent_Registration1.Properties.Resources.resources
+D:\Projects\WFormCP\Srudent Registration1\Srudent Registration1\obj\Debug\Student Registration1.csproj.GenerateResource.Cache
+D:\Projects\WFormCP\Srudent Registration1\Srudent Registration1\obj\Debug\Srudent Registration1.exe
+D:\Projects\WFormCP\Srudent Registration1\Srudent Registration1\obj\Debug\Srudent Registration1.pdb
+D:\Projects\WFormCP\Srudent Registration1\Srudent Registration1\obj\Debug\Student Registration1.csprojResolveAssemblyReference.cache

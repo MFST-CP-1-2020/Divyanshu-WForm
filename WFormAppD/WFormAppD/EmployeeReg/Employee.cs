@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace WFormAppD.EmployeeReg
 {
+    /// <summary>
+    /// 
+    /// </summary>
     class Employee
     {
+       
     }
 }
+
+

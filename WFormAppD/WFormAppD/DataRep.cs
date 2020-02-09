@@ -10,14 +10,16 @@ using System.Windows.Forms;
 
 namespace WFormAppD
 {
-    public partial class Form1 : Form
+    public partial class DataRep : Form
     {
-        public Form1()
+        public DataRep()
         {
             InitializeComponent();
         }
 
         DataTable dt = new DataTable();
+
+
         void insert_col()
         {
             dt.Columns.Add("First Name");
@@ -34,8 +36,7 @@ namespace WFormAppD
             dt.Columns.Add("Country");
             dt.Columns.Add("Pincode");
         }
-
-        private void Form1_Load(object sender, EventArgs e)
+        private void DataRep_Load(object sender, EventArgs e)
         {
             insert_col();
         }
