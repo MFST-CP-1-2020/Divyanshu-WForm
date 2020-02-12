@@ -28,36 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.btn1 = new System.Windows.Forms.Button();
-            this.txtbox1 = new System.Windows.Forms.TextBox();
-            this.txtbox5 = new System.Windows.Forms.TextBox();
-            this.txtbox3 = new System.Windows.Forms.TextBox();
-            this.txtbox2 = new System.Windows.Forms.TextBox();
+            this.Add_bttn = new System.Windows.Forms.Button();
+            this.fn_txt = new System.Windows.Forms.TextBox();
+            this.phn_txt = new System.Windows.Forms.TextBox();
+            this.fa_txt = new System.Windows.Forms.TextBox();
+            this.ln_txt = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtbox4 = new System.Windows.Forms.TextBox();
-            this.txtbox6 = new System.Windows.Forms.TextBox();
-            this.txtbox8 = new System.Windows.Forms.TextBox();
-            this.txtbox7 = new System.Windows.Forms.TextBox();
-            this.txtbox10 = new System.Windows.Forms.TextBox();
-            this.txtbox9 = new System.Windows.Forms.TextBox();
+            this.Ei_txt = new System.Windows.Forms.TextBox();
+            this.Nation_txt = new System.Windows.Forms.TextBox();
+            this.addr_txt = new System.Windows.Forms.TextBox();
+            this.pc_txt = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.comBox1 = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.comBox2 = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
+            this.upd_butt = new System.Windows.Forms.Button();
+            this.state_txt = new System.Windows.Forms.ComboBox();
+            this.Rn_txt = new System.Windows.Forms.TextBox();
             this.datagrid = new System.Windows.Forms.DataGridView();
-            this.reset_button = new System.Windows.Forms.Button();
+            this.country_txt = new System.Windows.Forms.ComboBox();
+            this.male_bttn = new System.Windows.Forms.RadioButton();
+            this.Female_btn = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.datagrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -102,44 +103,44 @@
             this.label4.TabIndex = 3;
             this.label4.Text = "Phn_no";
             // 
-            // btn1
+            // Add_bttn
             // 
-            this.btn1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn1.Location = new System.Drawing.Point(449, 659);
-            this.btn1.Name = "btn1";
-            this.btn1.Size = new System.Drawing.Size(87, 40);
-            this.btn1.TabIndex = 4;
-            this.btn1.Text = "ADD";
-            this.btn1.UseVisualStyleBackColor = true;
-            this.btn1.Click += new System.EventHandler(this.button1_Click);
+            this.Add_bttn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.Add_bttn.Location = new System.Drawing.Point(449, 659);
+            this.Add_bttn.Name = "Add_bttn";
+            this.Add_bttn.Size = new System.Drawing.Size(87, 40);
+            this.Add_bttn.TabIndex = 4;
+            this.Add_bttn.Text = "ADD";
+            this.Add_bttn.UseVisualStyleBackColor = true;
+            this.Add_bttn.Click += new System.EventHandler(this.Sumbit_btn);
             // 
-            // txtbox1
+            // fn_txt
             // 
-            this.txtbox1.Location = new System.Drawing.Point(202, 82);
-            this.txtbox1.Name = "txtbox1";
-            this.txtbox1.Size = new System.Drawing.Size(129, 20);
-            this.txtbox1.TabIndex = 6;
+            this.fn_txt.Location = new System.Drawing.Point(202, 82);
+            this.fn_txt.Name = "fn_txt";
+            this.fn_txt.Size = new System.Drawing.Size(129, 20);
+            this.fn_txt.TabIndex = 6;
             // 
-            // txtbox5
+            // phn_txt
             // 
-            this.txtbox5.Location = new System.Drawing.Point(202, 265);
-            this.txtbox5.Name = "txtbox5";
-            this.txtbox5.Size = new System.Drawing.Size(129, 20);
-            this.txtbox5.TabIndex = 7;
+            this.phn_txt.Location = new System.Drawing.Point(202, 265);
+            this.phn_txt.Name = "phn_txt";
+            this.phn_txt.Size = new System.Drawing.Size(129, 20);
+            this.phn_txt.TabIndex = 7;
             // 
-            // txtbox3
+            // fa_txt
             // 
-            this.txtbox3.Location = new System.Drawing.Point(202, 169);
-            this.txtbox3.Name = "txtbox3";
-            this.txtbox3.Size = new System.Drawing.Size(129, 20);
-            this.txtbox3.TabIndex = 8;
+            this.fa_txt.Location = new System.Drawing.Point(202, 169);
+            this.fa_txt.Name = "fa_txt";
+            this.fa_txt.Size = new System.Drawing.Size(129, 20);
+            this.fa_txt.TabIndex = 8;
             // 
-            // txtbox2
+            // ln_txt
             // 
-            this.txtbox2.Location = new System.Drawing.Point(202, 126);
-            this.txtbox2.Name = "txtbox2";
-            this.txtbox2.Size = new System.Drawing.Size(129, 20);
-            this.txtbox2.TabIndex = 9;
+            this.ln_txt.Location = new System.Drawing.Point(202, 126);
+            this.ln_txt.Name = "ln_txt";
+            this.ln_txt.Size = new System.Drawing.Size(129, 20);
+            this.ln_txt.TabIndex = 9;
             // 
             // label5
             // 
@@ -161,47 +162,33 @@
             this.label6.TabIndex = 11;
             this.label6.Text = "Email_id";
             // 
-            // txtbox4
+            // Ei_txt
             // 
-            this.txtbox4.Location = new System.Drawing.Point(202, 215);
-            this.txtbox4.Name = "txtbox4";
-            this.txtbox4.Size = new System.Drawing.Size(129, 20);
-            this.txtbox4.TabIndex = 12;
+            this.Ei_txt.Location = new System.Drawing.Point(202, 215);
+            this.Ei_txt.Name = "Ei_txt";
+            this.Ei_txt.Size = new System.Drawing.Size(129, 20);
+            this.Ei_txt.TabIndex = 12;
             // 
-            // txtbox6
+            // Nation_txt
             // 
-            this.txtbox6.Location = new System.Drawing.Point(202, 405);
-            this.txtbox6.Name = "txtbox6";
-            this.txtbox6.Size = new System.Drawing.Size(129, 20);
-            this.txtbox6.TabIndex = 13;
+            this.Nation_txt.Location = new System.Drawing.Point(202, 405);
+            this.Nation_txt.Name = "Nation_txt";
+            this.Nation_txt.Size = new System.Drawing.Size(129, 20);
+            this.Nation_txt.TabIndex = 13;
             // 
-            // txtbox8
+            // addr_txt
             // 
-            this.txtbox8.Location = new System.Drawing.Point(202, 510);
-            this.txtbox8.Name = "txtbox8";
-            this.txtbox8.Size = new System.Drawing.Size(129, 20);
-            this.txtbox8.TabIndex = 15;
+            this.addr_txt.Location = new System.Drawing.Point(202, 460);
+            this.addr_txt.Name = "addr_txt";
+            this.addr_txt.Size = new System.Drawing.Size(129, 20);
+            this.addr_txt.TabIndex = 16;
             // 
-            // txtbox7
+            // pc_txt
             // 
-            this.txtbox7.Location = new System.Drawing.Point(202, 460);
-            this.txtbox7.Name = "txtbox7";
-            this.txtbox7.Size = new System.Drawing.Size(129, 20);
-            this.txtbox7.TabIndex = 16;
-            // 
-            // txtbox10
-            // 
-            this.txtbox10.Location = new System.Drawing.Point(202, 597);
-            this.txtbox10.Name = "txtbox10";
-            this.txtbox10.Size = new System.Drawing.Size(129, 20);
-            this.txtbox10.TabIndex = 18;
-            // 
-            // txtbox9
-            // 
-            this.txtbox9.Location = new System.Drawing.Point(202, 554);
-            this.txtbox9.Name = "txtbox9";
-            this.txtbox9.Size = new System.Drawing.Size(129, 20);
-            this.txtbox9.TabIndex = 19;
+            this.pc_txt.Location = new System.Drawing.Point(202, 597);
+            this.pc_txt.Name = "pc_txt";
+            this.pc_txt.Size = new System.Drawing.Size(129, 20);
+            this.pc_txt.TabIndex = 18;
             // 
             // label7
             // 
@@ -213,40 +200,15 @@
             this.label7.TabIndex = 20;
             this.label7.Text = "Sex";
             // 
-            // comBox1
-            // 
-            this.comBox1.FormattingEnabled = true;
-            this.comBox1.Items.AddRange(new object[] {
-            "Male",
-            "Female",
-            "others"});
-            this.comBox1.Location = new System.Drawing.Point(202, 310);
-            this.comBox1.Name = "comBox1";
-            this.comBox1.Size = new System.Drawing.Size(129, 21);
-            this.comBox1.TabIndex = 21;
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.label8.Location = new System.Drawing.Point(24, 355);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(119, 24);
+            this.label8.Size = new System.Drawing.Size(74, 24);
             this.label8.TabIndex = 22;
-            this.label8.Text = "Blood_group";
-            // 
-            // comBox2
-            // 
-            this.comBox2.FormattingEnabled = true;
-            this.comBox2.Items.AddRange(new object[] {
-            "O+",
-            "A-",
-            "AB+",
-            "B+"});
-            this.comBox2.Location = new System.Drawing.Point(202, 352);
-            this.comBox2.Name = "comBox2";
-            this.comBox2.Size = new System.Drawing.Size(129, 21);
-            this.comBox2.TabIndex = 23;
+            this.label8.Text = "Roll_no";
             // 
             // label9
             // 
@@ -300,41 +262,89 @@
             this.label13.TabIndex = 28;
             this.label13.Text = "Pin_code";
             // 
+            // upd_butt
+            // 
+            this.upd_butt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.upd_butt.Location = new System.Drawing.Point(617, 659);
+            this.upd_butt.Name = "upd_butt";
+            this.upd_butt.Size = new System.Drawing.Size(87, 40);
+            this.upd_butt.TabIndex = 30;
+            this.upd_butt.Text = "UPDATE";
+            this.upd_butt.UseVisualStyleBackColor = true;
+            this.upd_butt.Click += new System.EventHandler(this.Update_btn);
+            // 
+            // state_txt
+            // 
+            this.state_txt.FormattingEnabled = true;
+            this.state_txt.Location = new System.Drawing.Point(202, 512);
+            this.state_txt.Name = "state_txt";
+            this.state_txt.Size = new System.Drawing.Size(129, 21);
+            this.state_txt.TabIndex = 31;
+            // 
+            // Rn_txt
+            // 
+            this.Rn_txt.Location = new System.Drawing.Point(202, 360);
+            this.Rn_txt.Name = "Rn_txt";
+            this.Rn_txt.Size = new System.Drawing.Size(129, 20);
+            this.Rn_txt.TabIndex = 32;
+            // 
             // datagrid
             // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ControlDark;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.datagrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.datagrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.datagrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.datagrid.GridColor = System.Drawing.SystemColors.ActiveCaption;
             this.datagrid.Location = new System.Drawing.Point(578, 128);
             this.datagrid.Name = "datagrid";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("OpenSymbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.datagrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("OpenSymbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.datagrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.datagrid.Size = new System.Drawing.Size(863, 420);
             this.datagrid.TabIndex = 29;
+            this.datagrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datagrid_CellContentClick);
             // 
-            // reset_button
+            // country_txt
             // 
-            this.reset_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.reset_button.Location = new System.Drawing.Point(617, 659);
-            this.reset_button.Name = "reset_button";
-            this.reset_button.Size = new System.Drawing.Size(87, 40);
-            this.reset_button.TabIndex = 30;
-            this.reset_button.Text = "RESET";
-            this.reset_button.UseVisualStyleBackColor = true;
-            this.reset_button.Click += new System.EventHandler(this.button1_Click_1);
+            this.country_txt.FormattingEnabled = true;
+            this.country_txt.Location = new System.Drawing.Point(202, 556);
+            this.country_txt.Name = "country_txt";
+            this.country_txt.Size = new System.Drawing.Size(121, 21);
+            this.country_txt.TabIndex = 33;
+            // 
+            // male_bttn
+            // 
+            this.male_bttn.AutoSize = true;
+            this.male_bttn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.male_bttn.Location = new System.Drawing.Point(202, 319);
+            this.male_bttn.Name = "male_bttn";
+            this.male_bttn.Size = new System.Drawing.Size(58, 22);
+            this.male_bttn.TabIndex = 34;
+            this.male_bttn.TabStop = true;
+            this.male_bttn.Text = "Male";
+            this.male_bttn.UseVisualStyleBackColor = true;
+            // 
+            // Female_btn
+            // 
+            this.Female_btn.AutoSize = true;
+            this.Female_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.Female_btn.Location = new System.Drawing.Point(306, 320);
+            this.Female_btn.Name = "Female_btn";
+            this.Female_btn.Size = new System.Drawing.Size(75, 22);
+            this.Female_btn.TabIndex = 35;
+            this.Female_btn.TabStop = true;
+            this.Female_btn.Text = "Female";
+            this.Female_btn.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -342,30 +352,31 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.ClientSize = new System.Drawing.Size(1536, 698);
-            this.Controls.Add(this.reset_button);
+            this.Controls.Add(this.Female_btn);
+            this.Controls.Add(this.male_bttn);
+            this.Controls.Add(this.country_txt);
+            this.Controls.Add(this.Rn_txt);
+            this.Controls.Add(this.state_txt);
+            this.Controls.Add(this.upd_butt);
             this.Controls.Add(this.datagrid);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.comBox2);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.comBox1);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.txtbox9);
-            this.Controls.Add(this.txtbox10);
-            this.Controls.Add(this.txtbox7);
-            this.Controls.Add(this.txtbox8);
-            this.Controls.Add(this.txtbox6);
-            this.Controls.Add(this.txtbox4);
+            this.Controls.Add(this.pc_txt);
+            this.Controls.Add(this.addr_txt);
+            this.Controls.Add(this.Nation_txt);
+            this.Controls.Add(this.Ei_txt);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.txtbox2);
-            this.Controls.Add(this.txtbox3);
-            this.Controls.Add(this.txtbox5);
-            this.Controls.Add(this.txtbox1);
-            this.Controls.Add(this.btn1);
+            this.Controls.Add(this.ln_txt);
+            this.Controls.Add(this.fa_txt);
+            this.Controls.Add(this.phn_txt);
+            this.Controls.Add(this.fn_txt);
+            this.Controls.Add(this.Add_bttn);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -385,30 +396,31 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button btn1;
-        private System.Windows.Forms.TextBox txtbox1;
-        private System.Windows.Forms.TextBox txtbox5;
-        private System.Windows.Forms.TextBox txtbox3;
-        private System.Windows.Forms.TextBox txtbox2;
+        private System.Windows.Forms.Button Add_bttn;
+        private System.Windows.Forms.TextBox fn_txt;
+        private System.Windows.Forms.TextBox phn_txt;
+        private System.Windows.Forms.TextBox fa_txt;
+        private System.Windows.Forms.TextBox ln_txt;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtbox4;
-        private System.Windows.Forms.TextBox txtbox6;
-        private System.Windows.Forms.TextBox txtbox8;
-        private System.Windows.Forms.TextBox txtbox7;
-        private System.Windows.Forms.TextBox txtbox10;
-        private System.Windows.Forms.TextBox txtbox9;
+        private System.Windows.Forms.TextBox Ei_txt;
+        private System.Windows.Forms.TextBox Nation_txt;
+        private System.Windows.Forms.TextBox addr_txt;
+        private System.Windows.Forms.TextBox pc_txt;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox comBox1;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox comBox2;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Button upd_butt;
+        private System.Windows.Forms.ComboBox state_txt;
+        private System.Windows.Forms.TextBox Rn_txt;
         private System.Windows.Forms.DataGridView datagrid;
-        private System.Windows.Forms.Button reset_button;
+        private System.Windows.Forms.ComboBox country_txt;
+        private System.Windows.Forms.RadioButton male_bttn;
+        private System.Windows.Forms.RadioButton Female_btn;
     }
 }
 
