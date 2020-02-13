@@ -53,10 +53,10 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.upd_butt = new System.Windows.Forms.Button();
-            this.state_txt = new System.Windows.Forms.ComboBox();
+            this.state_combo = new System.Windows.Forms.ComboBox();
             this.Rn_txt = new System.Windows.Forms.TextBox();
             this.datagrid = new System.Windows.Forms.DataGridView();
-            this.country_txt = new System.Windows.Forms.ComboBox();
+            this.country_combo = new System.Windows.Forms.ComboBox();
             this.male_bttn = new System.Windows.Forms.RadioButton();
             this.Female_btn = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.datagrid)).BeginInit();
@@ -273,13 +273,13 @@
             this.upd_butt.UseVisualStyleBackColor = true;
             this.upd_butt.Click += new System.EventHandler(this.Update_btn);
             // 
-            // state_txt
+            // state_combo
             // 
-            this.state_txt.FormattingEnabled = true;
-            this.state_txt.Location = new System.Drawing.Point(202, 512);
-            this.state_txt.Name = "state_txt";
-            this.state_txt.Size = new System.Drawing.Size(129, 21);
-            this.state_txt.TabIndex = 31;
+            this.state_combo.FormattingEnabled = true;
+            this.state_combo.Location = new System.Drawing.Point(202, 512);
+            this.state_combo.Name = "state_combo";
+            this.state_combo.Size = new System.Drawing.Size(129, 21);
+            this.state_combo.TabIndex = 31;
             // 
             // Rn_txt
             // 
@@ -314,13 +314,14 @@
             this.datagrid.TabIndex = 29;
             this.datagrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datagrid_CellContentClick);
             // 
-            // country_txt
+            // country_combo
             // 
-            this.country_txt.FormattingEnabled = true;
-            this.country_txt.Location = new System.Drawing.Point(202, 556);
-            this.country_txt.Name = "country_txt";
-            this.country_txt.Size = new System.Drawing.Size(121, 21);
-            this.country_txt.TabIndex = 33;
+            this.country_combo.FormattingEnabled = true;
+            this.country_combo.Location = new System.Drawing.Point(202, 556);
+            this.country_combo.Name = "country_combo";
+            this.country_combo.Size = new System.Drawing.Size(121, 21);
+            this.country_combo.TabIndex = 33;
+            this.country_combo.SelectedIndexChanged += new System.EventHandler(this.country_combo_SelectedIndexChanged);
             // 
             // male_bttn
             // 
@@ -354,9 +355,9 @@
             this.ClientSize = new System.Drawing.Size(1536, 698);
             this.Controls.Add(this.Female_btn);
             this.Controls.Add(this.male_bttn);
-            this.Controls.Add(this.country_txt);
+            this.Controls.Add(this.country_combo);
             this.Controls.Add(this.Rn_txt);
-            this.Controls.Add(this.state_txt);
+            this.Controls.Add(this.state_combo);
             this.Controls.Add(this.upd_butt);
             this.Controls.Add(this.datagrid);
             this.Controls.Add(this.label13);
@@ -415,10 +416,10 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Button upd_butt;
-        private System.Windows.Forms.ComboBox state_txt;
+        private System.Windows.Forms.ComboBox state_combo;
         private System.Windows.Forms.TextBox Rn_txt;
         private System.Windows.Forms.DataGridView datagrid;
-        private System.Windows.Forms.ComboBox country_txt;
+        private System.Windows.Forms.ComboBox country_combo;
         private System.Windows.Forms.RadioButton male_bttn;
         private System.Windows.Forms.RadioButton Female_btn;
     }
