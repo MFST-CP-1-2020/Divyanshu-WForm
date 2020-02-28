@@ -1,0 +1,300 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="TestDbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Employee">
+          <Key>
+            <PropertyRef Name="Employeid" />
+          </Key>
+          <Property Name="Employeid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Firstname" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Lastname" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Gender" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Phoneno" Type="bigint" Nullable="false" />
+          <Property Name="State" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Country" Type="nvarchar" MaxLength="10" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Student">
+          <Key>
+            <PropertyRef Name="Studentid" />
+          </Key>
+          <Property Name="Studentid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="First name" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="Last name" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="Gender" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="Phone no" Type="bigint" Nullable="false" />
+          <Property Name="State" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="Country" Type="nchar" MaxLength="10" Nullable="false" />
+        </EntityType>
+        <Function Name="AddEmployees" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="firstname" Type="nvarchar" Mode="In" />
+          <Parameter Name="lastname" Type="nvarchar" Mode="In" />
+          <Parameter Name="phoneno" Type="bigint" Mode="In" />
+          <Parameter Name="gender" Type="nvarchar" Mode="In" />
+          <Parameter Name="state" Type="nvarchar" Mode="In" />
+          <Parameter Name="country" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="Addstudent" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="si" Type="int" Mode="In" />
+          <Parameter Name="fn" Type="nvarchar" Mode="In" />
+          <Parameter Name="ln" Type="nvarchar" Mode="In" />
+          <Parameter Name="gn" Type="nvarchar" Mode="In" />
+          <Parameter Name="pn" Type="bigint" Mode="In" />
+          <Parameter Name="st" Type="nvarchar" Mode="In" />
+          <Parameter Name="cn" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="Addstudents" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="studentid" Type="int" Mode="In" />
+          <Parameter Name="firstname" Type="nvarchar" Mode="In" />
+          <Parameter Name="lastname" Type="nvarchar" Mode="In" />
+          <Parameter Name="gender" Type="nvarchar" Mode="In" />
+          <Parameter Name="phoneno" Type="bigint" Mode="In" />
+          <Parameter Name="state" Type="nvarchar" Mode="In" />
+          <Parameter Name="country" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="DeleteEmployees" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Employeid" Type="int" Mode="In" />
+        </Function>
+        <Function Name="DeleteProcedure" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="st" Type="nvarchar" Mode="In" />
+          <Parameter Name="cn" Type="nvarchar" Mode="In" />
+          <Parameter Name="si" Type="int" Mode="In" />
+        </Function>
+        <Function Name="Deletestudent" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="si" Type="int" Mode="In" />
+        </Function>
+        <Function Name="Deletestudent1" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="studentid" Type="int" Mode="In" />
+        </Function>
+        <Function Name="GetEmployees" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="GetStudentdata" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="Myprocedure2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="si" Type="int" Mode="In" />
+          <Parameter Name="fn" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="ln" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="gn" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="pn" Type="bigint" Mode="In" />
+          <Parameter Name="st" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="cn" Type="nvarchar(max)" Mode="In" />
+        </Function>
+        <Function Name="UpdateEmployees" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Employeid" Type="int" Mode="In" />
+          <Parameter Name="state" Type="nvarchar" Mode="In" />
+          <Parameter Name="country" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="Updateprocedure" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="state" Type="nvarchar" Mode="In" />
+          <Parameter Name="country" Type="nvarchar" Mode="In" />
+          <Parameter Name="studentid" Type="int" Mode="In" />
+        </Function>
+        <EntityContainer Name="TestDbModelStoreContainer">
+          <EntitySet Name="Employee" EntityType="Self.Employee" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Student" EntityType="Self.Student" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="TestDbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Employee">
+          <Key>
+            <PropertyRef Name="Employeid" />
+          </Key>
+          <Property Name="Employeid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Firstname" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Lastname" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Gender" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Phoneno" Type="Int64" Nullable="false" />
+          <Property Name="State" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Country" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Student">
+          <Key>
+            <PropertyRef Name="Studentid" />
+          </Key>
+          <Property Name="Studentid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="First_name" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Last_name" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Gender" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Phone_no" Type="Int64" Nullable="false" />
+          <Property Name="State" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Country" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="TestDbEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Employees" EntityType="Self.Employee" />
+          <EntitySet Name="Students" EntityType="Self.Student" />
+          <FunctionImport Name="AddEmployees" ReturnType="Collection(Decimal)">
+            <Parameter Name="firstname" Mode="In" Type="String" />
+            <Parameter Name="lastname" Mode="In" Type="String" />
+            <Parameter Name="phoneno" Mode="In" Type="Int64" />
+            <Parameter Name="gender" Mode="In" Type="String" />
+            <Parameter Name="state" Mode="In" Type="String" />
+            <Parameter Name="country" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="Addstudent">
+            <Parameter Name="si" Mode="In" Type="Int32" />
+            <Parameter Name="fn" Mode="In" Type="String" />
+            <Parameter Name="ln" Mode="In" Type="String" />
+            <Parameter Name="gn" Mode="In" Type="String" />
+            <Parameter Name="pn" Mode="In" Type="Int64" />
+            <Parameter Name="st" Mode="In" Type="String" />
+            <Parameter Name="cn" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="Addstudents" ReturnType="Collection(Decimal)">
+            <Parameter Name="studentid" Mode="In" Type="Int32" />
+            <Parameter Name="firstname" Mode="In" Type="String" />
+            <Parameter Name="lastname" Mode="In" Type="String" />
+            <Parameter Name="gender" Mode="In" Type="String" />
+            <Parameter Name="phoneno" Mode="In" Type="Int64" />
+            <Parameter Name="state" Mode="In" Type="String" />
+            <Parameter Name="country" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="DeleteEmployees">
+            <Parameter Name="Employeid" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="DeleteProcedure">
+            <Parameter Name="st" Mode="In" Type="String" />
+            <Parameter Name="cn" Mode="In" Type="String" />
+            <Parameter Name="si" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="Deletestudent">
+            <Parameter Name="si" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="Deletestudent1">
+            <Parameter Name="studentid" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="GetEmployees" ReturnType="Collection(TestDbModel.GetEmployees_Result)" />
+          <FunctionImport Name="GetStudentdata" ReturnType="Collection(TestDbModel.GetStudentdata_Result)" />
+          <FunctionImport Name="Myprocedure2">
+            <Parameter Name="si" Mode="In" Type="Int32" />
+            <Parameter Name="fn" Mode="In" Type="String" />
+            <Parameter Name="ln" Mode="In" Type="String" />
+            <Parameter Name="gn" Mode="In" Type="String" />
+            <Parameter Name="pn" Mode="In" Type="Int64" />
+            <Parameter Name="st" Mode="In" Type="String" />
+            <Parameter Name="cn" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="UpdateEmployees">
+            <Parameter Name="Employeid" Mode="In" Type="Int32" />
+            <Parameter Name="state" Mode="In" Type="String" />
+            <Parameter Name="country" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="Updateprocedure">
+            <Parameter Name="state" Mode="In" Type="String" />
+            <Parameter Name="country" Mode="In" Type="String" />
+            <Parameter Name="studentid" Mode="In" Type="Int32" />
+          </FunctionImport>
+        </EntityContainer>
+        <ComplexType Name="GetEmployees_Result">
+          <Property Type="Int32" Name="Employeid" Nullable="false" />
+          <Property Type="String" Name="Firstname" Nullable="false" MaxLength="10" />
+          <Property Type="String" Name="Lastname" Nullable="false" MaxLength="10" />
+          <Property Type="String" Name="Gender" Nullable="false" MaxLength="10" />
+          <Property Type="Int64" Name="Phoneno" Nullable="false" />
+          <Property Type="String" Name="State" Nullable="false" MaxLength="10" />
+          <Property Type="String" Name="Country" Nullable="false" MaxLength="10" />
+        </ComplexType>
+        <ComplexType Name="GetStudentdata_Result">
+          <Property Type="Int32" Name="Studentid" Nullable="false" />
+          <Property Type="String" Name="First_name" Nullable="false" MaxLength="10" />
+          <Property Type="String" Name="Last_name" Nullable="false" MaxLength="10" />
+          <Property Type="String" Name="Gender" Nullable="false" MaxLength="10" />
+          <Property Type="Int64" Name="Phone_no" Nullable="false" />
+          <Property Type="String" Name="State" Nullable="false" MaxLength="10" />
+          <Property Type="String" Name="Country" Nullable="false" MaxLength="10" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="TestDbModelStoreContainer" CdmEntityContainer="TestDbEntities">
+          <EntitySetMapping Name="Employees">
+            <EntityTypeMapping TypeName="TestDbModel.Employee">
+              <MappingFragment StoreEntitySet="Employee">
+                <ScalarProperty Name="Employeid" ColumnName="Employeid" />
+                <ScalarProperty Name="Firstname" ColumnName="Firstname" />
+                <ScalarProperty Name="Lastname" ColumnName="Lastname" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="Phoneno" ColumnName="Phoneno" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Students">
+            <EntityTypeMapping TypeName="TestDbModel.Student">
+              <MappingFragment StoreEntitySet="Student">
+                <ScalarProperty Name="Studentid" ColumnName="Studentid" />
+                <ScalarProperty Name="First_name" ColumnName="First name" />
+                <ScalarProperty Name="Last_name" ColumnName="Last name" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="Phone_no" ColumnName="Phone no" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="AddEmployees" FunctionName="TestDbModel.Store.AddEmployees" />
+          <FunctionImportMapping FunctionImportName="Addstudent" FunctionName="TestDbModel.Store.Addstudent" />
+          <FunctionImportMapping FunctionImportName="Addstudents" FunctionName="TestDbModel.Store.Addstudents" />
+          <FunctionImportMapping FunctionImportName="DeleteEmployees" FunctionName="TestDbModel.Store.DeleteEmployees" />
+          <FunctionImportMapping FunctionImportName="DeleteProcedure" FunctionName="TestDbModel.Store.DeleteProcedure" />
+          <FunctionImportMapping FunctionImportName="Deletestudent" FunctionName="TestDbModel.Store.Deletestudent" />
+          <FunctionImportMapping FunctionImportName="Deletestudent1" FunctionName="TestDbModel.Store.Deletestudent1" />
+          <FunctionImportMapping FunctionImportName="GetEmployees" FunctionName="TestDbModel.Store.GetEmployees">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="TestDbModel.GetEmployees_Result">
+                <ScalarProperty Name="Employeid" ColumnName="Employeid" />
+                <ScalarProperty Name="Firstname" ColumnName="Firstname" />
+                <ScalarProperty Name="Lastname" ColumnName="Lastname" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="Phoneno" ColumnName="Phoneno" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GetStudentdata" FunctionName="TestDbModel.Store.GetStudentdata">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="TestDbModel.GetStudentdata_Result">
+                <ScalarProperty Name="Studentid" ColumnName="Studentid" />
+                <ScalarProperty Name="First_name" ColumnName="First name" />
+                <ScalarProperty Name="Last_name" ColumnName="Last name" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="Phone_no" ColumnName="Phone no" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="Myprocedure2" FunctionName="TestDbModel.Store.Myprocedure2" />
+          <FunctionImportMapping FunctionImportName="UpdateEmployees" FunctionName="TestDbModel.Store.UpdateEmployees" />
+          <FunctionImportMapping FunctionImportName="Updateprocedure" FunctionName="TestDbModel.Store.Updateprocedure" />
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

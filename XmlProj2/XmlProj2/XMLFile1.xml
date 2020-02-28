@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Student_Details>
+  
+  <Student>
+    <First_name>fn1</First_name>
+    <Last_name>ln1</Last_name>
+    <Roll_no> 1</Roll_no>
+    <Phn_no>123</Phn_no>
+    <Gender>Male</Gender>
+    <Address>Addr1</Address>
+    <State>state</State>
+    <Country>country1</Country>
+  </Student>
+  
+   <Student>
+    <First_name>fn2</First_name>
+    <Last_name>ln2</Last_name>
+    <Roll_no> 2</Roll_no>
+    <Phn_no>1234</Phn_no>
+    <Gender>Male</Gender>
+    <Address>Addr2</Address>
+    <State>state2</State>
+    <Country>country2</Country>
+  </Student>
+
+   <Student>
+    <First_name>fn3</First_name>
+    <Last_name>ln3</Last_name>
+    <Roll_no> 3</Roll_no>
+    <Phn_no>12345</Phn_no>
+    <Gender>female</Gender>
+    <Address>Addr3</Address>
+    <State>state3</State>
+    <Country>country3</Country>
+  </Student>
+  
+   <Student>
+    <First_name>fn4</First_name>
+    <Last_name>ln4</Last_name>
+    <Roll_no> 4</Roll_no>
+    <Phn_no>123456</Phn_no>
+    <Gender>Male</Gender>
+    <Address>Addr4</Address>
+    <State>state4</State>
+    <Country>country4</Country>
+  </Student>
+  
+   <Student>
+    <First_name>fn5</First_name>
+    <Last_name>ln5</Last_name>
+    <Roll_no> 5</Roll_no>
+    <Phn_no>1234567</Phn_no>
+    <Gender>female</Gender>
+    <Address>Addr5</Address>
+    <State>state5</State>
+    <Country>country5</Country>
+  </Student>
+
+
+
+</Student_Details>

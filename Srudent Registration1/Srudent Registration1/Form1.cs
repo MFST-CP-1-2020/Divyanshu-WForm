@@ -12,11 +12,11 @@ namespace Srudent_Registration1
 {
     public partial class Form1 : Form
     {
-        int indexRow;
+      //  int indexRow;
         // Defining Datatable
         DataTable st = new DataTable();
         DataTable cn = new DataTable();
-        DataTable dt = new DataTable();
+      //  DataTable dt = new DataTable();
         public Form1()
         {
             InitializeComponent();
@@ -28,13 +28,13 @@ namespace Srudent_Registration1
             Country();
             add_states();
         }
-        // Assigning States to comboBox
+       // Adding columns to State combobox
         void State()
         {
             st.Columns.Add("Id", typeof(int));
             st.Columns.Add("Name", typeof(string));
         }
-
+        // Assigning States to comboBox
         void add_states()
         {
             st.Clear();
@@ -91,7 +91,7 @@ namespace Srudent_Registration1
 
 
         // Creating a method for inserting columns into grid
-        void insert_col()
+      /*  void insert_col()
         {
 
             dt.Columns.Add("First_name", typeof(String));
@@ -107,18 +107,18 @@ namespace Srudent_Registration1
             dt.Columns.Add("Country");
             dt.Columns.Add("Pin_Code");
         }
-
+        */
         // Now call thiss method in the form
         private void Form1_Load(object sender, EventArgs e)
         {
-            insert_col();
+           // insert_col();
             bindContents();
             //Disabling the update button
             upd_butt.Enabled = false;
         }
 
         // Now assigning the values to the rows of grid 
-        void Add_rows()
+       void Add_rows()
         {
             DataRow dr = dt.NewRow();
 
@@ -139,26 +139,26 @@ namespace Srudent_Registration1
             dr[10] = country_combo.Text;
             dr[11] = pc_txt.Text;
             dt.Rows.Add(dr);
-            MessageBox.Show("Data saved successfuly");
+            MessageBox.Show("Data saved successfuly"); 
         }
         private void Sumbit_btn(object sender, EventArgs e)
         {
-            Add_rows();
+           // Add_rows();
 
             // binding the data to the grid
-            datagrid.DataSource = dt;
-            bind_edit();
-            bind_delete();
-            reset_text();
+          //  datagrid.DataSource = dt;
+          //  bind_edit();
+         //   bind_delete();
+         //   reset_text();
 
 
         }
 
-        private void label9_Click(object sender, EventArgs e)
+       private void label9_Click(object sender, EventArgs e)
         {
 
         }
-
+        
         // this method will reset all the values of the textboxes
 
             void reset_text()
@@ -197,14 +197,14 @@ namespace Srudent_Registration1
             newDataRow.Cells[10].Value = country_combo.Text;
             newDataRow.Cells[11].Value = pc_txt.Text;
             reset_text();
-        }
-        private void Update_btn(object sender, EventArgs e)
+        } 
+       private void Update_btn(object sender, EventArgs e)
         {
-            txtbox_to_grid();
-            upd_butt.Enabled = false;
-            Add_bttn.Enabled = true;
+           // txtbox_to_grid();
+           // upd_butt.Enabled = false;
+           // Add_bttn.Enabled = true;
         }
-
+        
         // Adding edit button in the grid
         public void bind_edit()
         {
@@ -240,7 +240,7 @@ namespace Srudent_Registration1
             {
                 datagrid.Columns.Add(del_bttn);
             }
-        }
+        } 
 
 
 
@@ -288,6 +288,24 @@ namespace Srudent_Registration1
         private void country_combo_SelectedIndexChanged(object sender, EventArgs e)
         {
             add_states();
-        }
+        } 
+
+    class Student
+    {
+        public string First_name { get; set; }
+        public string Last_name { get; set; }
+        public string Father_name { get; set; }
+        public string Email_id { get; set; }
+        public string phn_no { get; set; }
+        public string Sex { get; set; }
+        public string Roll_no { get; set; }
+        public string Nationality { get; set; }
+        public string Address { get; set; }
+        public string State { get; set; }
+        public string Country { get; set; }
+        public string Pincode { get; set; }
     }
-}
+
+
+    }
+
