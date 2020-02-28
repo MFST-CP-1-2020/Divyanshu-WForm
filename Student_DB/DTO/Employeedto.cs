@@ -12,7 +12,7 @@ namespace DTO
         public string First_name { get; set; }
         public string Last_name { get; set; }
         public string gender { get; set; }
-        public string Phone_no { get; set; }
+        public long Phone_no { get; set; }
         public string State { get; set; }
         public string Country { get; set; }
     }

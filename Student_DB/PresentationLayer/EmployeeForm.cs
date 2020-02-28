@@ -18,9 +18,9 @@ namespace PresentationLayer
             InitializeComponent();
         }
 
-        DTO.Employee et = new DTO.Employee();
-        BAL.Employee emp = new BAL.Employee();
-       // Employeedto et = new Employeedto();
+        // DTO.Employee et = new DTO.Employee();
+        Employee emp = new Employee();
+        Employeedto et = new Employeedto();
         /// <summary>
         /// this method will add textbox data into corresponding fields..
         /// </summary>
@@ -28,14 +28,14 @@ namespace PresentationLayer
         {
             try
             {
-                et.Employeid = int.Parse(txtEmployeid.Text);
-                et.Phoneno = int.Parse(txtPhoneno.Text);
+                et.emp_id = int.Parse(txtEmployeid.Text);
+                et.Phone_no = long.Parse(txtPhoneno.Text);
             }
             catch (Exception)
             { }
-            et.Firstname = txtFirstname.Text;
-            et.Lastname = txtLastname.Text;
-            et.Gender = txtGender.Text;
+            et.First_name = txtFirstname.Text;
+            et.Last_name = txtLastname.Text;
+            et.gender = txtGender.Text;
             et.State = txtState.Text;
             et.Country = txtCountry.Text;
         }

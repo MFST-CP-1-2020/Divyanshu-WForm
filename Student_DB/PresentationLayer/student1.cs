@@ -20,8 +20,8 @@ namespace PresentationLayer
         }
 
         newStudent st = new newStudent();
-        //  Studentdto dta = new Studentdto();
-        DTO.Student dta = new DTO.Student();
+          Studentdto dta = new Studentdto();
+       // DTO.Student dta = new DTO.Student();
            
         /// <summary>
         /// this method will add textbox data into corresponding fields..
@@ -30,14 +30,14 @@ namespace PresentationLayer
         {
             try
             {
-                dta.Studentid = int.Parse(txtStudentid.Text);
+                dta.stud_id = int.Parse(txtStudentid.Text);
                 dta.Phone_no = int.Parse(txtPhoneNo.Text);
             }
             catch (Exception)
             { }
             dta.First_name = txtFirstName.Text;
             dta.Last_name = txtLastName.Text;
-            dta.Gender = txtGender.Text;
+            dta.gender = txtGender.Text;
             dta.State = txtState.Text;
             dta.Country = txtCountry.Text;
         }

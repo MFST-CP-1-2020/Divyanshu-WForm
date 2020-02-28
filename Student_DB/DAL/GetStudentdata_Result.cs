@@ -7,12 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DTO
+namespace DAL
 {
     using System;
-    using System.Collections.Generic;
     
-    public partial class Student
+    public partial class GetStudentdata_Result
     {
         public int Studentid { get; set; }
         public string First_name { get; set; }

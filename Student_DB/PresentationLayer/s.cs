@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace PresentationLayer
 {
-    static class Program
+    static class s
     {
         /// <summary>
         /// The main entry point for the application.
@@ -16,7 +16,7 @@ namespace PresentationLayer
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new EmployeeForm());
+            Application.Run(new student1());
         }
     }
 }

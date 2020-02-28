@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DTO
+namespace DAL
 {
     using System;
     using System.Data.Entity;
@@ -15,10 +15,10 @@ namespace DTO
     using System.Data.Entity.Core.Objects;
     using System.Linq;
     
-    public partial class TestDbEntities : DbContext
+    public partial class TestDbEntities1 : DbContext
     {
-        public TestDbEntities()
-            : base("name=TestDbEntities")
+        public TestDbEntities1()
+            : base("name=TestDbEntities1")
         {
         }
     

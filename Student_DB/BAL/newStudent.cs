@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DTO;
 using DAL;
+using BAL.Mapper;
 namespace BAL
 {
    public  class newStudent
@@ -22,8 +23,10 @@ namespace BAL
          public string Country { get; set; } */
 
        // Studentdto dta = new Studentdto();
-        DAL.Student dtn = new DAL.Student();
-        DTO.Student dta = new DTO.Student();
+        StudentDl dtn = new StudentDl();
+        Studentdto dta = new Studentdto();
+        StudentMaper maps = new StudentMaper();
+        //DTO.Student dta = new DTO.Student();
         //Creating sqlHelper class object..
         //SqlHelper sh = new SqlHelper();
 
@@ -67,13 +70,13 @@ namespace BAL
         /// <summary>
         /// This method will add Student data into database...
         /// </summary>
-        public void AddStudentData(DTO.Student dta)
+        public void AddStudentData(Studentdto dta)
         {
             //  SqlCommand cmd = new SqlCommand();
             /// Addparameter(dta);
             // string val = sh.Executescalar("Addstudents", true);
             //  MessageBox.Show("Record inserted successfully. Stud_ID = " + val);
-            dtn.AddStudentData(dta);
+            dtn.AddStudentData(maps.GetmapperSt(dta));
         }
 
         /// <summary>
@@ -95,7 +98,7 @@ namespace BAL
         public void deleteStudent(int Id)
         {
            // SqlCommand cmd = new SqlCommand();
-            dta.Studentid = Id;
+            dta.stud_id = Id;
             // Addparameterdel(dta);
             // sh.Executequery("Deletestudent1", true);
             dtn.deleteStudent(Id);
@@ -104,16 +107,15 @@ namespace BAL
         /// This method will Update Student data into database...
         /// </summary>
         /// <param name="Id"></param>
-        public void UpdateStudent(DTO.Student dta,int Id)
+        public void UpdateStudent(Studentdto dta,int Id)
         {
           //  SqlCommand cmd = new SqlCommand();
-            dta.Studentid = Id;
+            dta.stud_id = Id;
             // Addparameterdupdt(dta);
             // sh.Executequery("Updateprocedure", true);
-            dtn.UpdateStudent(dta,Id);
+            dtn.UpdateStudent(maps.GetmapperSt(dta), Id);
         }
 
     }
 }
-
 

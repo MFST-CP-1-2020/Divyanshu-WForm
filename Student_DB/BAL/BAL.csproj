@@ -43,7 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Employee.cs" />
+    <Compile Include="Employeebal.cs" />
+    <Compile Include="Mapper\EmployeMaper.cs" />
+    <Compile Include="Mapper\StudentMaper.cs" />
     <Compile Include="newStudent.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

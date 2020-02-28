@@ -54,10 +54,37 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EmployeeDal.cs" />
+    <Compile Include="Employee.cs">
+      <DependentUpon>NewModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Employeedl.cs" />
+    <Compile Include="GetEmployees_Result.cs">
+      <DependentUpon>NewModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetStudentdata_Result.cs">
+      <DependentUpon>NewModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NewModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NewModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NewModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NewModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NewModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NewModel.edmx</DependentUpon>
+    </Compile>
     <Compile Include="newSqlHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="student.cs" />
+    <Compile Include="student.cs">
+      <DependentUpon>NewModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StudentDl.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Student_DB\Student_DB.csproj">
@@ -67,10 +94,29 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.Config" />
+    <EntityDeploy Include="NewModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>NewModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="NewModel.edmx.diagram">
+      <DependentUpon>NewModel.edmx</DependentUpon>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="NewModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>NewModel.edmx</DependentUpon>
+      <LastGenOutput>NewModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="NewModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>NewModel.edmx</DependentUpon>
+      <LastGenOutput>NewModel.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

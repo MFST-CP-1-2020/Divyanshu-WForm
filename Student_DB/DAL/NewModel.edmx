@@ -123,7 +123,7 @@
           <Property Name="State" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
           <Property Name="Country" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
         </EntityType>
-        <EntityContainer Name="TestDbEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="TestDbEntities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Employees" EntityType="Self.Employee" />
           <EntitySet Name="Students" EntityType="Self.Student" />
           <FunctionImport Name="AddEmployees" ReturnType="Collection(Decimal)">
@@ -211,7 +211,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="TestDbModelStoreContainer" CdmEntityContainer="TestDbEntities">
+        <EntityContainerMapping StorageEntityContainer="TestDbModelStoreContainer" CdmEntityContainer="TestDbEntities1">
           <EntitySetMapping Name="Employees">
             <EntityTypeMapping TypeName="TestDbModel.Employee">
               <MappingFragment StoreEntitySet="Employee">
