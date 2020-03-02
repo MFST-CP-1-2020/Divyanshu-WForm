@@ -18,9 +18,11 @@ namespace PresentationLayer
             InitializeComponent();
         }
 
-        // DTO.Employee et = new DTO.Employee();
+        // This object will help to access the methods of BAL class..
         Employee emp = new Employee();
-        Employeedto et = new Employeedto();
+        // This object will help in accessing fields of DTO class..
+        Employeedto empdto = new Employeedto();
+
         /// <summary>
         /// this method will add textbox data into corresponding fields..
         /// </summary>
@@ -28,16 +30,16 @@ namespace PresentationLayer
         {
             try
             {
-                et.emp_id = int.Parse(txtEmployeid.Text);
-                et.Phone_no = long.Parse(txtPhoneno.Text);
+                empdto.emp_id = int.Parse(txtEmployeid.Text);
+                empdto.Phone_no = long.Parse(txtPhoneno.Text);
             }
             catch (Exception)
             { }
-            et.First_name = txtFirstname.Text;
-            et.Last_name = txtLastname.Text;
-            et.gender = txtGender.Text;
-            et.State = txtState.Text;
-            et.Country = txtCountry.Text;
+            empdto.First_name = txtFirstname.Text;
+            empdto.Last_name = txtLastname.Text;
+            empdto.gender = txtGender.Text;
+            empdto.State = txtState.Text;
+            empdto.Country = txtCountry.Text;
         }
 
         /// <summary>
@@ -49,7 +51,7 @@ namespace PresentationLayer
         {
             DataTable dt = new DataTable();
             AddEmployee();
-            emp.AddEmployeeData(et);
+            emp.AddEmployeeData(empdto);
             dt = emp.getData();
             dataGridView1.DataSource = dt;
             clearStudentData();
@@ -63,7 +65,7 @@ namespace PresentationLayer
         private void DeleteEmployee_Click(object sender, EventArgs e)
         {
             DataTable dt = new DataTable();
-            emp.deleteEmployee(et,int.Parse(txtEmployeid.Text));
+            emp.deleteEmployee(empdto, int.Parse(txtEmployeid.Text));
             dt = emp.getData();
             dataGridView1.DataSource = dt;
             clearStudentData();
@@ -77,7 +79,7 @@ namespace PresentationLayer
         {
             DataTable dt = new DataTable();
             AddEmployee();
-            emp.UpdateEmployee(et,int.Parse(txtEmployeid.Text));
+            emp.UpdateEmployee(empdto, int.Parse(txtEmployeid.Text));
             dt = emp.getData();
             dataGridView1.DataSource = dt;
             clearStudentData();

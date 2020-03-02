@@ -8,89 +8,27 @@ using System.Threading.Tasks;
 using DTO;
 namespace DAL
 {
+       /// <summary>
+       /// This Class is responsible for interacting with Database and perform CRUD operation..
+       /// </summary>
         public class Employeedl
         {
-            // Declaring all the fields..
-          /*  public int emp_id { get; set; }
-            public string First_name { get; set; }
-            public string Last_name { get; set; }
-            public string gender { get; set; }
-            public string Phone_no { get; set; }
-            public string State { get; set; }
-            public string Country { get; set; }*/
-
-            //Creating sqlHelper class object..
-            //SqlHelper sh = new SqlHelper();
-            Employeedto et = new Employeedto();
-            Employee eti = new Employee();
-       // DTO.Employee empl = new DTO.Employee();
-          
-
-
-
-        /// <summary>
-        /// This method will add parameter for Add method..
-        /// </summary>
-        /// <param name="st"></param>
-        /// <returns></returns>
-        /*  public void Addparameter(DTO.Employee empl)
-              {
-               //   sh.sqlparameter("@Employeid", SqlDbType.Int, ParameterDirection.Input, Convert.ToInt32(emp.emp_id));
-                  sh.sqlparameter("@firstname", SqlDbType.NVarChar, ParameterDirection.Input, (empl.Firstname));
-                  sh.sqlparameter("@lastname", SqlDbType.NVarChar, ParameterDirection.Input, (empl.Lastname));
-                  sh.sqlparameter("@gender", SqlDbType.NVarChar, ParameterDirection.Input, (empl.Gender));
-                  sh.sqlparameter("@phoneno", SqlDbType.BigInt, ParameterDirection.Input, Convert.ToInt32(empl.Phoneno));
-                  sh.sqlparameter("@state", SqlDbType.NVarChar, ParameterDirection.Input, (empl.State));
-                  sh.sqlparameter("@country", SqlDbType.NVarChar, ParameterDirection.Input, (empl.Country));
-              }
-              /// <summary>
-              /// This method will add parameter for delete method..
-              /// </summary>
-              /// <param name="st"></param>
-              /// <returns></returns>
-              public void Addparameterdel(DTO.Employee empl)
-              {
-                  sh.sqlparameter("@Employeid", SqlDbType.Int, ParameterDirection.Input, Convert.ToInt32(empl.Employeid));
-              }
-              /// <summary>
-              /// This method will add parameter for Update method..
-              /// </summary>
-              /// <param name="st"></param>
-              /// <returns></returns>
-              public void Addparameterdupdt(DTO.Employee empl)
-              {
-                  sh.sqlparameter("@Employeid", SqlDbType.Int, ParameterDirection.Input, Convert.ToInt32(empl.Employeid));
-                  sh.sqlparameter("@state", SqlDbType.NVarChar, ParameterDirection.Input, (empl.State));
-                  sh.sqlparameter("@country", SqlDbType.NVarChar, ParameterDirection.Input, (empl.Country));
-              }*/
+            //Employeedto et = new Employeedto();
+           // Object creation of entity Model Employee class..
+            Employee emp = new Employee();
+            
         /// <summary>
         /// This method will add Employee data into database...
         /// </summary>
-        /* public void AddEmployeeData(Employeedto et)
-             {
-                // SqlCommand cmd = new SqlCommand();
-                 Addparameter(et);
-                 string val = sh.Executescalar("AddEmployees", true);
-                 // MessageBox.Show("Record inserted successfully. Stud_ID = " + val);
-             }*/
-
-        public void AddEmployeeData(Employee eti)
+        public void AddEmployeeData(Employee emp)
         {
 
-            using (var dbCtx = new TestDbEntities1())
+            using (var context = new TestDbEntities1())
             {
-
-                //Add Student object into Students DBset
-                dbCtx.Employees.Add(eti);
-
-                // call SaveChanges method to save student into database
-                dbCtx.SaveChanges();
-                // SqlCommand cmd = new SqlCommand();
-                //Addparameter(dto);
-                //string val = sh.Executescalar("AddEmployees", true);
-                // MessageBox.Show("Record inserted successfully. Stud_ID = " + val);
+                context.Employees.Add(emp);
+                context.SaveChanges();
             }
-             }
+         }     
         /// <summary>
         /// This method will get Employee data into datatable...
         /// </summary>
@@ -100,6 +38,7 @@ namespace DAL
             TestDbEntities1 context = new TestDbEntities1();
             DataTable dt = addcol();
             var dto = (from d in context.Employees select d);
+            // this loop will add rows into datagrid..
             foreach (var rowobject in dto)
             {
                 DataRow dr = dt.NewRow();
@@ -114,6 +53,10 @@ namespace DAL
             }
             return dt;
         }
+        /// <summary>
+        /// This method will add columns to the datagrid..
+        /// </summary>
+        /// <returns></returns>
         private DataTable addcol()
         {
             DataTable dt = new DataTable();
@@ -133,39 +76,25 @@ namespace DAL
         /// <param name="Id"></param>
         public void deleteEmployee(int Id)
             {
-                //SqlCommand cmd = new SqlCommand();
-                eti.Employeid = Id;
+                emp.Employeid = Id;
             TestDbEntities1 context = new TestDbEntities1();
             var dto = (from d in context.Employees where d.Employeid == Id select d).Single();
             context.Employees.Remove(dto);
             context.SaveChanges();
-
-            //  Addparameterdel(empl);
-            // sh.Executequery("DeleteEmployees", true);
-
         }
         /// <summary>
         /// This method will update Employee data into database...
         /// </summary>
         /// <param name="Id"></param>
-        public void UpdateEmployee(Employee eti, int Id)
+        public void UpdateEmployee(Employee emp, int Id)
             {
-              //  SqlCommand cmd = new SqlCommand();
-                eti.Employeid = Id;
+                emp.Employeid = Id;
                 TestDbEntities1 context = new TestDbEntities1();
-            
-
-                var student = (from d in context.Employees where d.Employeid == eti.Employeid select d).Single();
-                // student = emp;
-                student.State = eti.State;
-                student.Country = eti.Country;
+                var student = (from d in context.Employees where d.Employeid == emp.Employeid select d).Single();
+                student.State = emp.State;
+                student.Country = emp.Country;
 
                 context.SaveChanges();
-
-                //  using (var dbCtx = new TestDbEntities())
-
-                // Addparameterdupdt(empl);
-                // sh.Executequery("UpdateEmployees", true);
             }
 
         }

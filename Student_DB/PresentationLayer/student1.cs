@@ -19,9 +19,10 @@ namespace PresentationLayer
             InitializeComponent();
         }
 
-        newStudent st = new newStudent();
-          Studentdto dta = new Studentdto();
-       // DTO.Student dta = new DTO.Student();
+        // This object will help to access the methods of BAL class..
+        StudentBal stbal = new StudentBal();
+        // This object will help in accessing fields of DTO class
+          Studentdto stdto = new Studentdto();
            
         /// <summary>
         /// this method will add textbox data into corresponding fields..
@@ -30,16 +31,16 @@ namespace PresentationLayer
         {
             try
             {
-                dta.stud_id = int.Parse(txtStudentid.Text);
-                dta.Phone_no = int.Parse(txtPhoneNo.Text);
+                stdto.stud_id = int.Parse(txtStudentid.Text);
+                stdto.Phone_no = int.Parse(txtPhoneNo.Text);
             }
             catch (Exception)
             { }
-            dta.First_name = txtFirstName.Text;
-            dta.Last_name = txtLastName.Text;
-            dta.gender = txtGender.Text;
-            dta.State = txtState.Text;
-            dta.Country = txtCountry.Text;
+            stdto.First_name = txtFirstName.Text;
+            stdto.Last_name = txtLastName.Text;
+            stdto.gender = txtGender.Text;
+            stdto.State = txtState.Text;
+            stdto.Country = txtCountry.Text;
         }
 
         public void Form1()
@@ -56,8 +57,8 @@ namespace PresentationLayer
         {
             DataTable dt = new DataTable();
             AddStudent();
-            st.AddStudentData(dta);
-            dt = st.getData();
+            stbal.AddStudentData(stdto);
+            dt = stbal.getData();
             dataGridView1.DataSource = dt;
             clearStudentData();
         }
@@ -70,8 +71,8 @@ namespace PresentationLayer
         private void DeleteStudent_Click(object sender, EventArgs e)
         {
             DataTable dt = new DataTable();
-            st.deleteStudent(int.Parse(txtStudentid.Text));
-            dt = st.getData();
+            stbal.deleteStudent(int.Parse(txtStudentid.Text));
+            dt = stbal.getData();
             dataGridView1.DataSource = dt;
             clearStudentData();
         }
@@ -84,8 +85,8 @@ namespace PresentationLayer
         {
             DataTable dt = new DataTable();
             AddStudent();
-            st.UpdateStudent(dta,int.Parse(txtStudentid.Text));
-            dt = st.getData();
+            stbal.UpdateStudent(stdto, int.Parse(txtStudentid.Text));
+            dt = stbal.getData();
             dataGridView1.DataSource = dt;
             clearStudentData();
         }
@@ -98,7 +99,7 @@ namespace PresentationLayer
         private void getbtn_Click(object sender, EventArgs e)
         {
             DataTable dt = new DataTable();
-            dt = st.getData();
+            dt = stbal.getData();
             dataGridView1.DataSource = dt;
 
         }

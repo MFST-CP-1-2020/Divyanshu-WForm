@@ -7,6 +7,9 @@ using DAL;
 using DTO;
 namespace BAL.Mapper
 {
+    /// <summary>
+    /// This class will map the the object of DTO class with Entity model class...
+    /// </summary>
     class StudentMaper
     {
         public Student GetmapperSt(Studentdto dta)

@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace DTO
 {
+    /// <summary>
+    /// This class will contains all the properties of Employee class..
+    /// </summary>
    public class Employeedto
     {
         public int emp_id { get; set; }

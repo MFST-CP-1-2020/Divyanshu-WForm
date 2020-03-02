@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.FormHeading = new System.Windows.Forms.Label();
-            this.getbtn = new System.Windows.Forms.Button();
-            this.btnUpdate = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
+            this.getbtnStudent = new System.Windows.Forms.Button();
+            this.btnUpdateStudent = new System.Windows.Forms.Button();
+            this.btnDeleteStudent = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnAddStudent = new System.Windows.Forms.Button();
             this.txtFirstName = new System.Windows.Forms.TextBox();
             this.txtLastName = new System.Windows.Forms.TextBox();
             this.txtGender = new System.Windows.Forms.TextBox();
@@ -61,35 +61,35 @@
             this.FormHeading.TabIndex = 41;
             this.FormHeading.Text = "Student Form";
             // 
-            // getbtn
+            // getbtnStudent
             // 
-            this.getbtn.Location = new System.Drawing.Point(821, 557);
-            this.getbtn.Name = "getbtn";
-            this.getbtn.Size = new System.Drawing.Size(75, 23);
-            this.getbtn.TabIndex = 40;
-            this.getbtn.Text = "GET";
-            this.getbtn.UseVisualStyleBackColor = true;
-            this.getbtn.Click += new System.EventHandler(this.getbtn_Click);
+            this.getbtnStudent.Location = new System.Drawing.Point(821, 557);
+            this.getbtnStudent.Name = "getbtnStudent";
+            this.getbtnStudent.Size = new System.Drawing.Size(75, 23);
+            this.getbtnStudent.TabIndex = 40;
+            this.getbtnStudent.Text = "GET";
+            this.getbtnStudent.UseVisualStyleBackColor = true;
+            this.getbtnStudent.Click += new System.EventHandler(this.getbtn_Click);
             // 
-            // btnUpdate
+            // btnUpdateStudent
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(699, 557);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(75, 23);
-            this.btnUpdate.TabIndex = 39;
-            this.btnUpdate.Text = "Update";
-            this.btnUpdate.UseVisualStyleBackColor = true;
-            this.btnUpdate.Click += new System.EventHandler(this.UpdateStudent_Click);
+            this.btnUpdateStudent.Location = new System.Drawing.Point(699, 557);
+            this.btnUpdateStudent.Name = "btnUpdateStudent";
+            this.btnUpdateStudent.Size = new System.Drawing.Size(75, 23);
+            this.btnUpdateStudent.TabIndex = 39;
+            this.btnUpdateStudent.Text = "Update";
+            this.btnUpdateStudent.UseVisualStyleBackColor = true;
+            this.btnUpdateStudent.Click += new System.EventHandler(this.UpdateStudent_Click);
             // 
-            // btnDelete
+            // btnDeleteStudent
             // 
-            this.btnDelete.Location = new System.Drawing.Point(571, 557);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(75, 23);
-            this.btnDelete.TabIndex = 38;
-            this.btnDelete.Text = "Delete";
-            this.btnDelete.UseVisualStyleBackColor = true;
-            this.btnDelete.Click += new System.EventHandler(this.DeleteStudent_Click);
+            this.btnDeleteStudent.Location = new System.Drawing.Point(571, 557);
+            this.btnDeleteStudent.Name = "btnDeleteStudent";
+            this.btnDeleteStudent.Size = new System.Drawing.Size(75, 23);
+            this.btnDeleteStudent.TabIndex = 38;
+            this.btnDeleteStudent.Text = "Delete";
+            this.btnDeleteStudent.UseVisualStyleBackColor = true;
+            this.btnDeleteStudent.Click += new System.EventHandler(this.DeleteStudent_Click);
             // 
             // dataGridView1
             // 
@@ -99,15 +99,15 @@
             this.dataGridView1.Size = new System.Drawing.Size(338, 207);
             this.dataGridView1.TabIndex = 37;
             // 
-            // btnAdd
+            // btnAddStudent
             // 
-            this.btnAdd.Location = new System.Drawing.Point(454, 557);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(75, 23);
-            this.btnAdd.TabIndex = 36;
-            this.btnAdd.Text = "Add";
-            this.btnAdd.UseVisualStyleBackColor = true;
-            this.btnAdd.Click += new System.EventHandler(this.AddStudent_Click);
+            this.btnAddStudent.Location = new System.Drawing.Point(454, 557);
+            this.btnAddStudent.Name = "btnAddStudent";
+            this.btnAddStudent.Size = new System.Drawing.Size(75, 23);
+            this.btnAddStudent.TabIndex = 36;
+            this.btnAddStudent.Text = "Add";
+            this.btnAddStudent.UseVisualStyleBackColor = true;
+            this.btnAddStudent.Click += new System.EventHandler(this.AddStudent_Click);
             // 
             // txtFirstName
             // 
@@ -234,11 +234,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1204, 725);
             this.Controls.Add(this.FormHeading);
-            this.Controls.Add(this.getbtn);
-            this.Controls.Add(this.btnUpdate);
-            this.Controls.Add(this.btnDelete);
+            this.Controls.Add(this.getbtnStudent);
+            this.Controls.Add(this.btnUpdateStudent);
+            this.Controls.Add(this.btnDeleteStudent);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.btnAdd);
+            this.Controls.Add(this.btnAddStudent);
             this.Controls.Add(this.txtFirstName);
             this.Controls.Add(this.txtLastName);
             this.Controls.Add(this.txtGender);
@@ -254,7 +254,7 @@
             this.Controls.Add(this.lblStudentid);
             this.Controls.Add(this.lblFirstName);
             this.Name = "student1";
-            this.Text = "student1";
+            this.Text = "StudentForm";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -264,11 +264,11 @@
         #endregion
 
         private System.Windows.Forms.Label FormHeading;
-        private System.Windows.Forms.Button getbtn;
-        private System.Windows.Forms.Button btnUpdate;
-        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button getbtnStudent;
+        private System.Windows.Forms.Button btnUpdateStudent;
+        private System.Windows.Forms.Button btnDeleteStudent;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnAddStudent;
         private System.Windows.Forms.TextBox txtFirstName;
         private System.Windows.Forms.TextBox txtLastName;
         private System.Windows.Forms.TextBox txtGender;

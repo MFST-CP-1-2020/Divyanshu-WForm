@@ -228,7 +228,7 @@
             this.lblEmployeeid.TabIndex = 21;
             this.lblEmployeeid.Text = "Employee_Id";
             // 
-            // Form1
+            // EmployeeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -253,8 +253,8 @@
             this.Controls.Add(this.lblState);
             this.Controls.Add(this.lblCountry);
             this.Controls.Add(this.lblEmployeeid);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "EmployeeForm";
+            this.Text = "EmpolyeeForm";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

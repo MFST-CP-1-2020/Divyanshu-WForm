@@ -8,86 +8,37 @@ using System.Data;
 
 namespace DAL
 {
+    /// <summary>
+    /// This class is responsible for interacting with the Database and to perform required operation...
+    /// </summary>
    public class StudentDl
     {
-        SqlHelper sh = new SqlHelper();
-        //  Employeedto et = new Employeedto();
-        Student dta = new Student();
+       // Object creation of Entity model Student class..
+        Student stentity = new Student();
 
         /// <summary>
-        /// This method will add parameter for Add method..
+        /// This method will add Student data into database...
         /// </summary>
-        /// <param name="st"></param>
-        /// <returns></returns>
-       /* public void Addparameter(DTO.Student dta)
-        {
-            //   sh.sqlparameter("@Employeid", SqlDbType.Int, ParameterDirection.Input, Convert.ToInt32(emp.emp_id));
-            sh.sqlparameter("@firstname", SqlDbType.NVarChar, ParameterDirection.Input, (dta.First_name));
-            sh.sqlparameter("@lastname", SqlDbType.NVarChar, ParameterDirection.Input, (dta.Last_name));
-            sh.sqlparameter("@gender", SqlDbType.NVarChar, ParameterDirection.Input, (dta.Gender));
-            sh.sqlparameter("@phoneno", SqlDbType.BigInt, ParameterDirection.Input, Convert.ToInt32(dta.Phone_no));
-            sh.sqlparameter("@state", SqlDbType.NVarChar, ParameterDirection.Input, (dta.State));
-            sh.sqlparameter("@country", SqlDbType.NVarChar, ParameterDirection.Input, (dta.Country));
-        }
-        /// <summary>
-        /// This method will add parameter for delete method..
-        /// </summary>
-        /// <param name="st"></param>
-        /// <returns></returns>
-        public void Addparameterdel(DTO.Student dta)
-        {
-            sh.sqlparameter("@Studentid", SqlDbType.Int, ParameterDirection.Input, Convert.ToInt32(dta.Studentid));
-        }
-        /// <summary>
-        /// This method will add parameter for Update method..
-        /// </summary>
-        /// <param name="st"></param>
-        /// <returns></returns>
-        public void Addparameterdupdt(DTO.Student dta)
-        {
-            sh.sqlparameter("@Studentid", SqlDbType.Int, ParameterDirection.Input, Convert.ToInt32(dta.Studentid));
-            sh.sqlparameter("@state", SqlDbType.NVarChar, ParameterDirection.Input, (dta.State));
-            sh.sqlparameter("@country", SqlDbType.NVarChar, ParameterDirection.Input, (dta.Country));
-        }
-        /// <summary>
-        /// This method will add Employee data into database...
-        /// </summary>
-        /* public void AddEmployeeData(Employeedto et)
-             {
-                // SqlCommand cmd = new SqlCommand();
-                 Addparameter(et);
-                 string val = sh.Executescalar("AddEmployees", true);
-                 // MessageBox.Show("Record inserted successfully. Stud_ID = " + val);
-             }*/
-
-        public void AddStudentData(Student dta)
+     
+        public void AddStudentData(Student stentity)
         {
 
-            using (var dbCtx = new TestDbEntities1())
+            using (var context = new TestDbEntities1())
             {
-
-                //Add Student object into Students DBset
-                dbCtx.Students.Add(dta);
-
-                // call SaveChanges method to save student into database
-                dbCtx.SaveChanges();
-                // SqlCommand cmd = new SqlCommand();
-                //Addparameter(dto);
-                //string val = sh.Executescalar("AddEmployees", true);
-                // MessageBox.Show("Record inserted successfully. Stud_ID = " + val);
+                context.Students.Add(stentity);
+                context.SaveChanges();
             }
         }
         /// <summary>
-        /// This method will get Employee data into datatable...
+        /// This method will get Student data into datatable...
         /// </summary>
         /// <returns></returns>
         public DataTable getData()
         {
-            // DataTable dt = sh.Dataadapter("GetStudentdata");
-            // DataTable dt = new DataTable();
             TestDbEntities1 context = new TestDbEntities1();
             DataTable dt = addcolm();
             var dto = (from d in context.Students select d);
+            // This loop will add Values into the rows of datagrid..
             foreach (var rowobject in dto)
             {
                 DataRow dr = dt.NewRow();
@@ -102,6 +53,10 @@ namespace DAL
             }
             return dt;
         }
+        /// <summary>
+        /// This method will add Columns to the datagrid..
+        /// </summary>
+        /// <returns></returns>
         private DataTable addcolm()
         {
             DataTable dt = new DataTable();
@@ -116,39 +71,29 @@ namespace DAL
         }
 
         /// <summary>
-        /// This method will delete Employee data into database...
+        /// This method will delete Student data into database...
         /// </summary>
         /// <param name="Id"></param>
         public void deleteStudent(int Id)
         {
-            //SqlCommand cmd = new SqlCommand();
-            dta.Studentid = Id;
+            stentity.Studentid = Id;
             TestDbEntities1 context = new TestDbEntities1();
             var dto = (from d in context.Students where d.Studentid == Id select d).Single();
             context.Students.Remove(dto);
             context.SaveChanges();
-            // Addparameterdel(dta);
-            //sh.Executequery("DeleteEmployees", true);
         }
         /// <summary>
-        /// This method will update Employee data into database...
+        /// This method will update Student data into database...
         /// </summary>
         /// <param name="Id"></param>
-        public void UpdateStudent(Student dta, int Id)
+        public void UpdateStudent(Student stentity, int Id)
         {
-            //  SqlCommand cmd = new SqlCommand();
-            dta.Studentid = Id;
+            stentity.Studentid = Id;
             TestDbEntities1 context = new TestDbEntities1();
-
-
             var student = (from d in context.Students where d.Studentid == Id select d).Single();
-            // student = emp;
-            student.State = dta.State;
-            student.Country = dta.Country;
-
+            student.State = stentity.State;
+            student.Country = stentity.Country;
             context.SaveChanges();
-            //Addparameterdupdt(dta);
-            //sh.Executequery("UpdateEmployees", true);
         }
     }
 }
